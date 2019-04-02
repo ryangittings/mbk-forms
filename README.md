@@ -17,7 +17,7 @@ It uses Recaptcha to verify that the submission isn't spam. If the submission is
   <perch:input type="hidden" id="action" value="validate_captcha">
 ```
 - Add `app="mbk_forms"` to your `perch:form` tag. This replaces `app="perch_forms"`!
-- Add the following script (I've included it within a `window.onload` function):
+- Add the following script to pages that include your form (I've included it within a `window.onload` function):
 ```
   window.onload = function(e) { 
     grecaptcha.ready(() => {
