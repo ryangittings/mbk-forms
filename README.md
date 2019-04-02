@@ -17,17 +17,19 @@ It uses Recaptcha to verify that the submission isn't spam. If the submission is
   <perch:input type="hidden" id="action" value="validate_captcha">
 ```
 - Add `app="mbk_forms"` to your `perch:form` tag. This replaces `app="perch_forms"`!
-- On document load, add this script:
+- Add the following script (I've included it within a `window.onload` function):
 ```
-  grecaptcha.ready(() => {
-    grecaptcha.execute('{YOUR_RECAPTCHA_SITE_KEY}', { action: 'validate_captcha' })
-      .then((token) => {
-        document.querySelector('.g-recaptcha-response').value = token;
-      });
-  });
+  window.onload = function(e) { 
+    grecaptcha.ready(() => {
+      grecaptcha.execute('YOUR_RECAPTCHA_SITE_KEY', { action: 'validate_captcha' })
+        .then((token) => {
+          document.querySelector('.g-recaptcha-response').value = token;
+        });
+    });
+  }
 ```
 - Job done!
 - To check successful installation front-end, your `g-recaptcha-response` input should populate with a string on document load (this is what the `grecaptcha.ready` code does). This is then passed through when the form is submitted. If the Recaptcha verification is complete, the form should submit. If not, you'll get a submission that's added to the 'Spam' section in forms, and returned to the form with the honeypot field with a value of `Failed captcha`.
 
-## Buy me a beer...
+## Buy me a beer?
 Coding is thirsty work. If you've found this app handy, you can [buy me a beer](https://www.paypal.me/ryangittings/3.50?locale.x=en_GB).
