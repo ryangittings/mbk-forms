@@ -9,7 +9,7 @@ It uses Recaptcha to verify that the submission isn't spam. If the submission is
 - Download ZIP
 - Upload contents of folder to `your_perch_folder/addons/apps/mbk_forms`
 - Add `mbk_forms` to `config/apps.php`
-- Update the settings in Perch settings with your Recaptcha secret key and [https://docs.grabaperch.com/addons/blog/spam/](honeypot) form field
+- Update the settings in Perch settings with your Recaptcha secret key and [honeypot](https://docs.grabaperch.com/addons/blog/spam/) form field
 - Add `<script src="https://www.google.com/recaptcha/api.js?render={YOUR_RECAPTCHA_SITE_KEY}" defer></script>` to every page document head
 - Add the following to your Perch Form
 ```
