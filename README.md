@@ -10,7 +10,7 @@ It uses Recaptcha to verify that the submission isn't spam. If the submission is
 - Upload contents of folder to `your_perch_folder/addons/apps/mbk_forms`
 - Add `mbk_forms` to `config/apps.php`
 - Update the settings in Perch settings with your Recaptcha secret key and [honeypot](https://docs.grabaperch.com/addons/blog/spam/) form field
-- Add `<script src="https://www.google.com/recaptcha/api.js?render={YOUR_RECAPTCHA_SITE_KEY}" defer></script>` to every page document head
+- Add `<script src="https://www.google.com/recaptcha/api.js?render=YOUR_RECAPTCHA_SITE_KEY" defer></script>` to every page document head
 - Add the following to your Perch Form
 ```
   <perch:input type="hidden" id="g-recaptcha-response" class="g-recaptcha-response">
