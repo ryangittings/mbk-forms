@@ -16,7 +16,7 @@ It uses Recaptcha to verify that the submission isn't spam. If the submission is
   <perch:input type="hidden" id="g-recaptcha-response" class="g-recaptcha-response">
   <perch:input type="hidden" id="action" value="validate_captcha">
 ```
-- Add `app="mbk_forms"` to your `perch:form` tag. This replaces `app="perch_forms"`!
+- Add `app="mbk_forms"` to your `perch:form` tag. This replaces `app="perch_forms"`! This app redispatches submissions from `mbk_forms` to `perch_forms`, so you don't need `perch_forms` in the `app` tag. Don't worry, your submissions will still post to Perch Forms as usual!
 - Add the following script to pages that include your form (I've included it within a `window.onload` function, below the `api.js` script above):
 ```
   <script>
