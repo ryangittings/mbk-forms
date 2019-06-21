@@ -21,7 +21,7 @@ A few users have found when using Recaptcha v3, genuine enquiries have gone to s
 ```
 - Add `app="mbk_forms"` to your `perch:form` tag. This replaces `app="perch_forms"`! This app redispatches submissions from `mbk_forms` to `perch_forms`, so you don't need `perch_forms` in the `app` tag. Don't worry, your submissions will still post to Perch Forms as usual!
 - Job done!
-- To check successful installation front-end, your `g-recaptcha-response` input should populate with a string on document load (this is what the `grecaptcha.ready` code does). This is then passed through when the form is submitted. If the Recaptcha verification is complete, the form should submit. If not, you'll get a submission that's added to the 'Spam' section in forms, and returned to the form with the honeypot field with a value of `Failed captcha`.
+- To check successful installation front-end, your `g-recaptcha-response` input should populate when the recaptcha is completed. This is then passed through when the form is submitted. If the Recaptcha verification is complete, the form should submit. If not, you'll get a submission that's added to the 'Spam' section in forms, and returned to the form with the honeypot field with a value of `Failed captcha`.
 
 ## Recaptcha v3 Installation
 - Download ZIP
