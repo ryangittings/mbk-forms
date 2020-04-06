@@ -39,6 +39,7 @@ function mbk_forms_form_handler($form) {
   }
 
   foreach($apps as $app) {
-    if(function_exists($app.'_form_handler')) $form->redispatch($app);
+    if( !$response->isSuccess() && $app !== 'perch_forms' ) continue;
+    if( function_exists($app.'_form_handler') ) $form->redispatch($app);
   }
 }
