@@ -1,4 +1,4 @@
-# Perch Forms Recaptcha
+# Perch Recaptcha
 
 This Perch app is to use Google Recaptcha with Perch templated forms. It works with both v2 and v3 of Recaptcha.
 
