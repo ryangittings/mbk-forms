@@ -5,14 +5,15 @@
 [![Latest Stable Version](https://poser.pugx.org/google/recaptcha/v/stable.svg)](https://packagist.org/packages/google/recaptcha)
 [![Total Downloads](https://poser.pugx.org/google/recaptcha/downloads.svg)](https://packagist.org/packages/google/recaptcha)
 
-reCAPTCHA is a free CAPTCHA service that protect websites from spam and abuse.
+reCAPTCHA is a free CAPTCHA service that protects websites from spam and abuse.
 This is a PHP library that wraps up the server-side verification step required
 to process responses from the reCAPTCHA service. This client supports both v2
 and v3.
 
 - reCAPTCHA: https://www.google.com/recaptcha
 - This repo: https://github.com/google/recaptcha
-- Version: 1.2.1
+- Hosted demo: https://recaptcha-demo.appspot.com/
+- Version: 1.2.4
 - License: BSD, see [LICENSE](LICENSE)
 
 ## Installation
@@ -88,7 +89,7 @@ The following methods are available:
   from an Android app. Again, you must do this if you have disabled
   "Domain/Package Name Validation" for your credentials.
 - `setExpectedAction($action)`: ensures the action matches for the v3 API.
-- `setScoreThreshold($threshold)`: set a score theshold for responses from the
+- `setScoreThreshold($threshold)`: set a score threshold for responses from the
   v3 API
 - `setChallengeTimeout($timeoutSeconds)`: set a timeout between the user passing
   the reCAPTCHA and your server processing it.
